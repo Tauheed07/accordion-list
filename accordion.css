@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans:wght@400;600&family=Oswald:wght@200;300;600&family=Smooch+Sans:wght@400;500;600&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.accordion{
+    display: grid;
+    align-content: center;
+    height:100vh;
+}
+.accordion__container{
+    display: grid;
+    margin: auto;
+    padding: 50px;
+    row-gap: 2rem;
+    background-color: rgb(243, 243, 243);
+    border-radius: 15px;
+    width: 75%;
+    max-width: 800px;
+    box-shadow: 0 12px 32px rgb(169, 163, 163);
+}
+.accordion__item{
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 6px 16px rgb(169, 163, 163);
+    position: relative;
+    font-family: Montserrat;
+}
+.accordion__item::after{
+    content: '';
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:0; 
+    border-radius: 10px 0 0 10px;
+}
+.accordion__item:nth-child(1) {
+    background-color: #fff7f0;
+  }
+  
+.accordion__item:nth-child(1)::after {
+    background-color: #ffc08a;
+  }
+  
+.accordion__item:nth-child(2) {
+    background-color: #f0f0ff;
+  }
+  
+.accordion__item:nth-child(2)::after {
+    background-color: #8a8aff;
+  }
+  
+.accordion__item:nth-child(3) {
+    background-color: #fff0f3;
+  }
+  
+.accordion__item:nth-child(3)::after {
+    background-color: #ff8aa1;
+  }
+  
+.accordion__item:nth-child(4) {
+    background-color: #f0faff;
+  }
+  
+.accordion__item:nth-child(4)::after {
+    background-color: #8ad8ff;
+  }
+.accordion__header{
+    display: flex;
+    cursor: pointer;
+}
+.accordion__icon{
+    position: absolute;
+    font-size: 24px;
+    transition: 0.3s all;
+}
+.accordion__title{
+    margin: 0 0 0 40px;
+    font-size: 20px;
+}
+.accordion__content{
+    height:0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.accordion__description{
+    margin: 5px 0 0 35px;
+    font-size: 16px;
+    transition: 0.3s all;
+}
+.accordion-open .accordion__icon{
+  transform: rotate(45deg);
+}
+.accordion-open .accordion__content{
+  height: max-content;
+}
+@media screen and (max-width:750px)  {
+  .accordion__container{
+    padding:25px;
+    row-gap: 1.5rem;
+  }
+  .accordion__title{
+    font-size: 16px;
+  }
+  .accordion__description{
+    font-size: 14px;
+  }
+  
+}
